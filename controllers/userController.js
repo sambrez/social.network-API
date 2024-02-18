@@ -6,6 +6,7 @@ module.exports = {
         try {
             const users = await User.find();
             res.json(users);
+
         } catch (err) {
             console.log(err);
             return res.status(500).json(err);
@@ -33,6 +34,7 @@ module.exports = {
         try {
             const user = await User.create(req.body);
             res.json(user);
+
         } catch (err) {
             console.log(err);
             return res.status(500).json(err);
@@ -52,6 +54,7 @@ module.exports = {
             }
 
             res.json(user);
+
         } catch (err) {
             console.log(err);
             return res.status(500).json(err);
@@ -108,6 +111,7 @@ module.exports = {
             }
 
             res.json(user);
+            
         } catch (err) {
             console.log(err);
             return res.status(500).json(err);
